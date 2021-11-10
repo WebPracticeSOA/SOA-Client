@@ -15,7 +15,7 @@ import javax.xml.ws.Service;
  * 
  */
 @WebServiceClient(name = "PTServiceService", 
-                  wsdlLocation = "http://106.15.42.179:8088/SOA-Part/webservice/PTService?wsdl",
+                  wsdlLocation = "http://106.15.42.179:8088/SOA2/webservice/PTService?wsdl",
                   targetNamespace = "http://PythonService/") 
 public class PTServiceService extends Service {
 
@@ -26,11 +26,11 @@ public class PTServiceService extends Service {
     static {
         URL url = null;
         try {
-            url = new URL("http://106.15.42.179:8088/SOA-Part/webservice/PTService?wsdl");
+            url = new URL("http://106.15.42.179:8088/SOA2/webservice/PTService?wsdl");
         } catch (MalformedURLException e) {
             java.util.logging.Logger.getLogger(PTServiceService.class.getName())
                 .log(java.util.logging.Level.INFO, 
-                     "Can not initialize the default wsdl from {0}", "http://106.15.42.179:8088/SOA-Part/webservice/PTService?wsdl");
+                     "Can not initialize the default wsdl from {0}", "http://106.15.42.179:8088/SOA2/webservice/PTService?wsdl");
         }
         WSDL_LOCATION = url;
     }

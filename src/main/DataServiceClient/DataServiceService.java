@@ -15,7 +15,7 @@ import javax.xml.ws.Service;
  * 
  */
 @WebServiceClient(name = "DataServiceService", 
-                  wsdlLocation = "http://106.15.42.179:8088/SOA-Part/webservice/DataService?wsdl",
+                  wsdlLocation = "http://106.15.42.179:8088/SOA2/webservice/DataService?wsdl",
                   targetNamespace = "http://DataService/") 
 public class DataServiceService extends Service {
 
@@ -26,11 +26,11 @@ public class DataServiceService extends Service {
     static {
         URL url = null;
         try {
-            url = new URL("http://106.15.42.179:8088/SOA-Part/webservice/DataService?wsdl");
+            url = new URL("http://106.15.42.179:8088/SOA2/webservice/DataService?wsdl");
         } catch (MalformedURLException e) {
             java.util.logging.Logger.getLogger(DataServiceService.class.getName())
                 .log(java.util.logging.Level.INFO, 
-                     "Can not initialize the default wsdl from {0}", "http://106.15.42.179:8088/SOA-Part/webservice/DataService?wsdl");
+                     "Can not initialize the default wsdl from {0}", "http://106.15.42.179:8088/SOA2/webservice/DataService?wsdl");
         }
         WSDL_LOCATION = url;
     }
